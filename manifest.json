@@ -20,11 +20,6 @@
     "default_title": "Did you commute?",
     "default_popup": "popup/index.html"
   },
-  "background": {
-    "scripts": [
-      "src/background.js"
-    ]
-  },
   "applications": {
     "gecko": {
       "id": "info@temptek.de"
