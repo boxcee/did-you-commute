@@ -1,0 +1,43 @@
+{
+  "name": "did-you-commute",
+  "version": "0.1.0",
+  "description": "Strava browser extension to simplify tagging an actitivy as commute.",
+  "main": "commute.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuddhasBlessedBoys/did-you-commute.git"
+  },
+  "keywords": [
+    "browser",
+    "strava",
+    "firefox",
+    "commute",
+    "extension"
+  ],
+  "author": "npm-install <noreply@marketlogicsoftware.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BuddhasBlessedBoys/did-you-commute/issues"
+  },
+  "homepage": "https://github.com/BuddhasBlessedBoys/did-you-commute#readme",
+  "dependencies": {
+    "@material-ui/core": "^3.2.2",
+    "axios": "^0.18.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "strava-v3": "^1.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
