@@ -3,11 +3,12 @@
   "name": "Did you commute?",
   "version": "0.1.0",
   "description": "Strava browser extension to simplify tagging an activity as commute.",
-  "homepage_url": "https://github.com/BuddhasBlessedBoys/did-you-commute",
+  "homepage_url": "https://github.com/DurchziehnDigga/did-you-commute",
   "permissions": [
     "storage",
     "identity",
-    "https://www.strava.com/oauth/authorize"
+    "https://www.strava.com/oauth/authorize",
+    "https://www.strava.com/oauth/accept_application"
   ],
   "short_name": "dyc",
   "developer": {

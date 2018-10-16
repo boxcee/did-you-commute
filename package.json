@@ -20,9 +20,9 @@
   "author": "npm-install <noreply@marketlogicsoftware.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BuddhasBlessedBoys/did-you-commute/issues"
+    "url": "https://github.com/DurchziehnDigga/did-you-commute/issues"
   },
-  "homepage": "https://github.com/BuddhasBlessedBoys/did-you-commute#readme",
+  "homepage": "https://github.com/DurchziehnDigga/did-you-commute#readme",
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "axios": "^0.18.0",
