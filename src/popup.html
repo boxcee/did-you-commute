@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StravaX</title>
+  <style type="text/css">
+    .container {
+      width: 250px;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .title {
+      padding: 8px;
+      background-color: black;
+      color: #fc4c02;
+      text-align: center;
+    }
+
+    .content {
+      padding-top: 8px;
+      padding-bottom: 4px;
+    }
+
+    .content-item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      border: solid #fc4c02 1px;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 4px;
+    }
+
+    .content-name {
+      padding-left: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 135px;
+      flex-grow: 1;
+    }
+
+    .content-distance {
+    }
+
+    .content-button {
+      border: none;
+      outline: none;
+      background-color: #fc4c02;
+      color: #fff;
+    }
+
+    .authorize {
+      display: none;
+      background-color: #fc4c02;
+    }
+
+    .authorize-button {
+      border: none;
+      background-color: transparent;
+      text-align: center;
+      color: #fff;
+      outline: none;
+      height: 40px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container" id="container">
+  <div class="title" id="title">StravaX</div>
+  <div class="content" id="content"></div>
+  <div class="authorize" id="authorize">
+    <button class="authorize-button" id="authorize-button">Authorize</button>
+  </div>
+</div>
+<script src="popup.js" type="application/javascript"></script>
+</body>
+</html>

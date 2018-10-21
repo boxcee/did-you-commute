@@ -1,16 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "Did you commute?",
+  "name": "StravaX",
   "version": "0.1.0",
   "description": "Strava browser extension to simplify tagging an activity as commute.",
-  "homepage_url": "https://github.com/DurchziehnDigga/did-you-commute",
+  "homepage_url": "https://github.com/boxcee/stravax",
   "permissions": [
     "storage",
-    "identity",
-    "https://www.strava.com/oauth/authorize",
-    "https://www.strava.com/oauth/accept_application"
+    "identity"
   ],
-  "short_name": "dyc",
+  "short_name": "StravaX",
   "developer": {
     "name": "Moritz Schmitz von Hülst",
     "url": "https://github.com/boxcee"
@@ -18,12 +16,12 @@
   "author": "Moritz Schmitz von Hülst",
   "browser_action": {
     "browser_style": true,
-    "default_title": "Did you commute?",
-    "default_popup": "popup/index.html"
+    "default_title": "StravaX",
+    "default_popup": "src/popup.html"
   },
   "applications": {
     "gecko": {
-      "id": "info@temptek.de"
+      "id": "extension@temptek.de"
     }
   },
   "content_scripts": [
@@ -32,8 +30,13 @@
         "<all_urls>"
       ],
       "js": [
-        "popup/index.js"
+        "src/popup.js"
       ]
     }
-  ]
+  ],
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  }
 }
