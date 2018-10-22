@@ -163,8 +163,6 @@ browser.runtime.onStartup.addListener(async () => {
 browser.runtime.onMessage.addListener(async (message) => {
   const { type, body } = JSON.parse(message);
 
-  console.log('message', type, body, message);
-
   switch (type) {
     case 'commute':
       await updateActivity(body);
@@ -177,4 +175,5 @@ browser.runtime.onMessage.addListener(async (message) => {
   }
 });
 
+getActivites();
 setInterval(getActivites, 600000);
