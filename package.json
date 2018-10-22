@@ -1,14 +1,13 @@
 {
-  "name": "stravax",
+  "name": "did-you-commute",
   "version": "0.1.0",
   "description": "Strava browser extension to simplify tagging an actitivy as commute.",
-  "main": "commute.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boxcee/stravax"
+    "url": "git+https://github.com/boxcee/did-you-commute"
   },
   "keywords": [
     "browser",
@@ -20,7 +19,7 @@
   "author": "Moritz Schmitz von Hülst <m.schmitzvonhuelst@posteo.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/boxcee/stravax/issues"
+    "url": "https://github.com/boxcee/did-you-commute/issues"
   },
-  "homepage": "https://github.com/boxcee/stravax#readme"
+  "homepage": "https://github.com/boxcee/did-you-commute#readme"
 }

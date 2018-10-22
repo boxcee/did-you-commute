@@ -126,16 +126,39 @@ const getActivites = async () => {
   }
 };
 
-const updateActivity = async (id) => {
+const updateActivity = async ({ id, commute }) => {
   const headers = await getHeaders();
-  const body = JSON.stringify({ commute: true });
+  headers.append('Content-Type', 'application/json; charset=UTF-8');
+  const body = JSON.stringify({ commute });
   const request = new Request(`https://www.strava.com/api/v3/activities/${id}`, {
     headers,
     method: 'PUT',
     body
   });
   await fetch(request);
+  const activities = get(ACTIVITIES_KEY);
+  const updatedActivities = activities
+    .reduce((arr, activity) => (activity.id === id
+      ? [...arr, ({
+        ...activity,
+        commute
+      })]
+      : [...arr, activity]), []);
+  const message = {
+    type: 'activities',
+    body: updatedActivities
+  };
+  browser.runtime.sendMessage(JSON.stringify(message));
+  set(ACTIVITIES_KEY, updatedActivities);
 };
+
+browser.runtime.onInstalled.addListener(() => {
+  localStorage.removeItem(AUTH_KEY);
+});
+
+browser.runtime.onStartup.addListener(async () => {
+  await getActivites();
+});
 
 browser.runtime.onMessage.addListener(async (message) => {
   const { type, body } = JSON.parse(message);
@@ -149,12 +172,9 @@ browser.runtime.onMessage.addListener(async (message) => {
     case 'authorize':
       await launchWebAuthFlow();
       break;
-    case 'list-activities':
-      await getActivites();
-      break;
     default:
       return;
   }
 });
 
-setInterval(getActivites, 60000);
+setInterval(getActivites, 600000);

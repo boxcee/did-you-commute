@@ -29,12 +29,12 @@ const addActivities = (body) => {
       item.appendChild(distanceElement);
 
       const commuteElement = document.createElement('button');
-      commuteElement.innerText = commute ? 'yes' : 'no';
+      commuteElement.innerText = commute ? 'Yes' : 'No';
       commuteElement.className = 'content-button';
       commuteElement.addEventListener('click', () => {
         const message = {
           type: 'commute',
-          body: id
+          body: { id, commute: !commute }
         };
 
         browser.runtime.sendMessage(JSON.stringify(message));
@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!authStorage) {
     auth.style = 'display: block';
     authButton.addEventListener('click', authorize);
-  }
-
-  if (activitiesStorage) {
-    const activities = JSON.parse(activitiesStorage);
-    addActivities(activities);
   } else {
-    addActivities([]);
+    if (activitiesStorage) {
+      const activities = JSON.parse(activitiesStorage);
+      addActivities(activities);
+    } else {
+      addActivities([]);
+    }
   }
 });
