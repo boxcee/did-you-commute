@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/boxcee/did-you-commute/issues"
   },
-  "homepage": "https://github.com/boxcee/did-you-commute#readme"
+  "homepage": "https://github.com/boxcee/did-you-commute#readme",
+  "devDependencies": {
+    "web-ext": "^2.9.1"
+  }
 }
